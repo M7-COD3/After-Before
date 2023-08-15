@@ -1,0 +1,849 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to left, #111316ec ,#111316f9), 
+                url("../image/background2.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    color: white;
+    backdrop-filter: blur(50px);
+}
+
+.containerBackground {
+    width: 100%;
+    height: 100vh;
+    float: right;
+}
+.clear {
+    clear: both;
+}
+
+.menu {
+    background: #0d1014e7;
+    width: 250px;
+    float: left;
+    height: 100vh;
+    padding: 20px 40px;
+    position: fixed;
+    z-index: 6666;
+    transition: 1s;
+    display: block;
+}
+
+.titlefilmes {
+    border-bottom: 2px solid rgba(51, 50, 50, 0.349);
+    width: 100%;
+    padding-bottom: 9px;
+}
+
+.titlefilmes span {
+    font-size: 30px;
+    color: #0aaadc;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.listaGeneros {
+    margin-top: 25px;
+}
+
+.listaGeneros .generos{
+    font-size: 19px;
+    color: #0aaadc;
+    cursor: pointer;
+    display: block;
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+.mygenere {
+    color: #0aaadc;
+    display: block;
+    font-size: 14px;
+    font-family: arial;
+    font-weight: 600;
+    margin: 10px 10px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.mygenere:hover{
+    color: #6ac7e4;
+    display: block;
+    font-size: 14px;
+    font-family: arial;
+    font-weight: 600;
+    margin: 10px 10px;
+    cursor: pointer;
+    &::before {
+        content: "-";margin-right: 10px;
+        font-size: 14px;
+        transition: 1s;
+    }
+}
+
+.containeNews {
+    border-top: 2px solid rgba(51, 50, 50, 0.349);
+    width: 100%;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.containeNews .suportBy {
+    font-size: 27px;
+    color: #0aaadc;
+    font-weight: 600;
+    cursor: pointer;
+    padding-bottom: 15px;
+    display: block;
+}
+
+.patrocinios {
+    color: #0aaadc;
+    display: block;
+    font-size: 14px;
+    font-family: arial;
+    font-weight: 600;
+    margin: 6px 10px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.patrocinios:hover{
+    color: #0aaadc;
+    display: block;
+    font-size: 14px;
+    font-family: arial;
+    font-weight: 600;
+    margin: 6px 10px;
+    cursor: pointer;
+    width: fit-content;
+    &::before {
+        content: "⊕︎";
+        margin-right: 10px;
+    }
+}
+
+.tirar {
+    color: #0aaadc;
+    cursor: pointer;
+    font-size: 40px;
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    display: none;
+}
+.tirar:hover{
+    color: #5dc3e2;
+    cursor: pointer;
+    font-size: 40px;
+    position: absolute;
+    right: 5px;
+    top: 0px;
+}
+
+.finalyMenu {
+    margin-top: 50px;
+    border-top: 2px solid rgba(51, 50, 50, 0.199);
+    padding-top: 20px;
+    color: #8f0adc;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+}
+
+.finalyMenu span {
+    display: block;
+    margin: 14px 0px;
+}
+
+.coracao1::before {
+    content: "♡";
+    font-weight: 600;
+    margin-right: 11px;
+    font-size: 18px;
+}
+.coracao2::before {
+    content: "☳";
+    font-weight: 600;
+    margin-right: 11px;
+    font-size: 18px;
+}
+.coracao3::before {
+    content: "✉︎";
+    font-weight: 600;
+    margin-right: 11px;
+    font-size: 18px;
+}
+
+.containerFilmes {
+    color: #5dc3e2;
+    width: 100%;
+    padding-left: 270px;
+    padding-right: 40px;
+}
+
+.headers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 11px;
+    border-bottom: 2px solid rgba(51, 50, 50, 0.637);
+}
+
+.contar1::before {
+    content: "♡";
+    font-weight: 600;
+    margin-right: 2px;
+    font-size: 14px;
+}
+.contar2::before {
+    content: "☆";
+    font-weight: 600;
+    margin-right: 2px;
+    font-size: 14px;
+}
+
+.pesquisar {
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    color: white;
+    width: 100%;
+    padding-right: 10px;
+    &::before {
+        content: "Ⓟ";
+    }
+}
+
+.pesquisar::placeholder{
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    color: rgb(150, 148, 148);
+    font-weight: 600;
+}
+
+.divInput {
+    display: flex;
+    align-items: center;
+    width: 35%;
+}
+
+.divInput img {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.titleSite {
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.contar1 {
+    font-weight: 600;
+}
+
+.contar2 {
+    font-weight: 600;
+}
+
+.filmes {
+    padding-top: 25px;
+    padding-bottom: 11px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0px;
+}
+
+.novoslancamentos {
+    color: #8f0adc;
+    font-weight: 600;
+    margin-top: 20px;
+    display: block;
+}
+
+.filmeCapas {
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/2.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgba(255, 255, 255, 0.493);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 1s;
+    margin-right: 10px;
+}
+
+
+.filmeCapas:hover{
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/2.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgb(187, 187, 187);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.363);
+}
+.filmeCapas2:hover{
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/1.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgb(187, 187, 187);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.363);
+}
+.filmeCapas3:hover{
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/3.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgb(187, 187, 187);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.363);
+}
+.filmeCapas4:hover{
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/4.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgb(187, 187, 187);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.363);
+}
+.filmeCapas5:hover{
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/5.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgb(187, 187, 187);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.363);
+}
+.filmeCapas6:hover{
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/6.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgb(187, 187, 187);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.363);
+}
+.filmeCapas7:hover{
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/7.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgb(187, 187, 187);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.363);
+}
+
+.filmeCapas2 {
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/1.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgba(255, 255, 255, 0.493);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 1s;
+    margin-right: 10px;
+}
+
+.filmeCapas3 {
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/3.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgba(255, 255, 255, 0.493);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 1s;
+    margin-right: 10px;
+}
+
+.filmeCapas4 {
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/4.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgba(255, 255, 255, 0.493);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 1s;
+    margin-right: 10px;
+}
+
+.filmeCapas5 {
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/5.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgba(255, 255, 255, 0.493);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 1s;
+    margin-right: 10px;
+}
+
+.filmeCapas6 {
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/6.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgba(255, 255, 255, 0.493);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 1s;
+    margin-right: 10px;
+}
+
+.filmeCapas7 {
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/7.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgba(255, 255, 255, 0.493);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 1s;
+    margin-right: 10px;
+}
+
+
+
+.filmeCapas8 {
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/8.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgba(255, 255, 255, 0.493);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 1s;
+    margin-right: 10px;
+}
+
+.filmeCapas9 {
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/9.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgba(255, 255, 255, 0.493);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 1s;
+    margin-right: 10px;
+}
+
+.filmeCapas10 {
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/10.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgba(255, 255, 255, 0.493);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 1s;
+    margin-right: 10px;
+}
+
+.filmeCapas11 {
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/11.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgba(255, 255, 255, 0.493);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 1s;
+    margin-right: 10px;
+}
+
+.filmeCapas12 {
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/12.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgba(255, 255, 255, 0.493);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 1s;
+    margin-right: 10px;
+}
+
+.filmeCapas13 {
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/17.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgba(255, 255, 255, 0.493);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 1s;
+    margin-right: 10px;
+}
+
+.filmeCapas14 {
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/14.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgba(255, 255, 255, 0.493);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 1s;
+    margin-right: 10px;
+}
+
+/* HOVERS*/
+
+.filmeCapas8:hover{
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/8.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgb(187, 187, 187);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.363);
+}
+.filmeCapas9:hover{
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/9.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgb(187, 187, 187);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.363);
+}
+.filmeCapas10:hover{
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/10.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgb(187, 187, 187);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.363);
+}
+.filmeCapas11:hover{
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/11.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgb(187, 187, 187);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.363);
+}
+.filmeCapas12:hover{
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/12.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgb(187, 187, 187);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.363);
+}
+.filmeCapas13:hover{
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/17.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgb(187, 187, 187);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.363);
+}
+.filmeCapas14:hover{
+    margin-top: 15px;
+    background: linear-gradient(to top, #111316, rgba(255, 0, 0, 0)),
+                url("../image/14.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 210px;
+    height: 320px;
+    color: rgb(187, 187, 187);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.363);
+}
+
+.myStyleLinks {
+    cursor: pointer;
+    position: relative;
+    left: 37px;
+    top: 10px;
+    transition: 1s;
+    display: none;
+}
+
+@media screen and (max-width: 945px) {
+    body {
+        background: linear-gradient(to left, #111316ec ,#111316f9), 
+                url("../image/background2.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        font-family: sans-serif;
+        color: white;
+        backdrop-filter: blur(50px);
+        transition: 1s;
+    }
+
+    .menu {
+        background: #0d1014e7;
+        width: 380px;
+        float: left;
+        height: 100vh;
+        padding: 20px 40px;
+        position: fixed;
+        z-index: 6666;
+        transition: 1s;
+        display: none;
+    }
+
+    div.containerFilmes {
+        color: #5dc3e2;
+        width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+        transition: 1s;
+    }
+
+    img.myStyleLinks {
+        cursor: pointer;
+        position: relative;
+        left: 37px;
+        top: 10px;
+        transition: 1s;
+        display: block;
+    }
+
+    div.tirar {
+        color: #0aaadc;
+        cursor: pointer;
+        font-size: 40px;
+        position: absolute;
+        right: 5px;
+        top: 11px;
+        display: block;
+    }
+
+    div.tirar:hover{
+        color: #0aaadc;
+        cursor: pointer;
+        font-size: 40px;
+        position: absolute;
+        right: 5px;
+        top: 11px;
+        display: block;
+    }
+    
+}
+
+
+
